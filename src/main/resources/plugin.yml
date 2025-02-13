@@ -1,0 +1,11 @@
+name: 'ODQ-PyroFishingPro'
+version: '${version}'
+main: com.ordwen.odqpyrofishingpro.ODQPyroFishingPro
+api-version: '1.16'
+prefix: 'ODQ-PyroFishingPro'
+authors: [ Ordwen ]
+description: Official ODailyQuests extension for PyroFishingPro support.
+depend:
+  - ODailyQuests
+  - PyroFishingPro
+folia-supported: true
