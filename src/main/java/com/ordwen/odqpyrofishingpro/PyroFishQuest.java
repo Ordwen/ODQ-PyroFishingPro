@@ -1,5 +1,6 @@
 package com.ordwen.odqpyrofishingpro;
 
+import com.ordwen.odailyquests.quests.player.progression.Progression;
 import com.ordwen.odailyquests.quests.types.AbstractQuest;
 import com.ordwen.odailyquests.quests.types.shared.BasicQuest;
 import com.ordwen.odailyquests.tools.PluginLogger;
@@ -15,7 +16,7 @@ public class PyroFishQuest extends AbstractQuest {
 
     private final Set<String> expectedFish = new HashSet<>();
 
-    protected PyroFishQuest(BasicQuest basicQuest) {
+    public PyroFishQuest(BasicQuest basicQuest) {
         super(basicQuest);
     }
 
@@ -25,7 +26,7 @@ public class PyroFishQuest extends AbstractQuest {
     }
 
     @Override
-    public boolean canProgress(Event provided) {
+    public boolean canProgress(Event provided, Progression progression) {
         if (provided instanceof PyroFishCatchEvent event) {
             if (expectedFish.isEmpty()) return true;
 
